@@ -5,7 +5,7 @@ describe 'As a user' do
     it 'should show me an image of space' do
       visit '/'
 
-      expect(page).to have_content("Welcome to Curious!")
+      expect(page).to have_content("Welcome to Curious Space!")
       expect(page).to have_content("Here's a photo from Mars:")
       expect(page).to have_content("Sol (Martian Date):")
       expect(page).to have_content("Rover:")

@@ -14,10 +14,10 @@ class PhotoService
       f.params["api_key"] = ENV['NASA_KEY']
     end
     result = JSON.parse(response.body, symbolize_names: true)[:photos]
-    photo_data = result.shuffle.pop
-    if photo_data.nil?
+    if result.nil?
       mars_photo
-    end 
+    end
+    photo_data = result.shuffle.pop
     pic = Photo.new(photo_data)
   end
 
