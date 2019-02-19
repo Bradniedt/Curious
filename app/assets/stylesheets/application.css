@@ -18,6 +18,10 @@ body {
   background: #354040;
   color: #DD7230;
 }
- .welcome {
+ .welcome, .data {
    text-align: center;
+ }
+
+ img {
+   margin: auto;
  }
