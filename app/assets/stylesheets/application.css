@@ -17,6 +17,8 @@ body {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   background: #354040;
   color: #DD7230;
+  width: 100vw;
+  height: 100vh;
 }
  .welcome, .data {
    margin-left: auto;
@@ -36,5 +38,3 @@ body {
    width: 70%;
    margin-left: 15%;
  }
-
- 
