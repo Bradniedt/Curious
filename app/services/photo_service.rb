@@ -3,18 +3,18 @@ class PhotoService
     @conn = Faraday.new("https://api.nasa.gov/") do |f|
       f.adapter Faraday.default_adapter
     end
-    @sol = rand(1..1000)
+    @sol = [996, 997, 998, 99, 1000]
   end
 
   def mars_photo
     response = @conn.get("mars-photos/api/v1/rovers/curiosity/photos?") do |f|
-      f.params["sol"] = @sol
+      f.params["sol"] = @sol.shuffle.pop
       f.params["page"] = 1
       f.params["camera"] = "NAVCAM"
       f.params["api_key"] = ENV['NASA_KEY']
     end
     result = JSON.parse(response.body, symbolize_names: true)[:photos]
-    if result.nil?
+    if result.length == 0
       mars_photo
     end
     photo_data = result.shuffle.pop
