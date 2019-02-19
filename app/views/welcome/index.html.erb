@@ -1,5 +1,4 @@
 <div class="main">
-  <div class="info">
     <h1 class="welcome">Welcome to Curious Space!</h1>
     <h3 class="welcome">Here's a photo of Mars:</h3>
     <p class="data">Nasa fun facts about this photo:</p>
@@ -9,6 +8,5 @@
       <li>Camera: <%= @photo.camera %></li>
       <li>Landed on Mars: <%= @photo.landing %></li>
     </ul>
-  </div>
   <%= image_tag("#{@photo.url}") %>
 </div>
