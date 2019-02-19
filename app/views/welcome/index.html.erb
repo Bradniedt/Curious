@@ -1,0 +1,10 @@
+<h1 class="welcome">Welcome to Curious!</h1>
+<h3 class="welcome">Here's a photo of Mars:</h3>
+<p class="data">Nasa fun facts about this photo:</p>
+<ul>
+  <li>Sol (Martian Date): <%= @photo.sol %></li>
+  <li>Rover: <%= @photo.rover %></li>
+  <li>Camera: <%= @photo.camera %></li>
+  <li>Landed on Mars: <%= @photo.landing %></li>
+</ul>
+<%= image_tag("#{@photo.url}") %>
