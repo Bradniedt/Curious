@@ -38,3 +38,9 @@ body {
    width: 70%;
    margin-left: 15%;
  }
+
+ .text-card {
+   background: rgba(255, 255, 255, 0.71);
+   border: 1px solid black;
+   border-radius: 5px;
+ }
