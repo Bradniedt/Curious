@@ -1,5 +1,5 @@
-<div class="main">
-  <section class="text-card">
+<div class="flex-container">
+  <section class="flex-item text-card">
     <h1 class="welcome">Welcome to Curious Space!</h1>
     <h3 class="welcome">Here's a photo of Mars:</h3>
     <p class="data">Nasa fun facts about this photo:</p>
@@ -10,5 +10,7 @@
       <li>Landed on Mars: <%= @photo.landing %></li>
     </ul>
   </section>
-  <%= image_tag("#{@photo.url}") %>
+  <section class="flex-item photo">
+    <%= image_tag("#{@photo.url}") %>
+  </section>
 </div>
